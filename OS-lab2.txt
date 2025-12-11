@@ -1,0 +1,61 @@
+LAB 2
+git clone git://g.csail.mit.edu/xv6-labs-2023
+
+Page tables
+Địa chỉ mà process tương tác
+
+Địa chỉ nằm trên RAM
+
+Page tables
+
+Page tables
+
+Page tables (Speed up system calls)
+Các bước làm như sau:
+- Đọc hiểu `ugetpid_test()` trong `user/pgtbltest.c`
+- Tìm hiểu trampoline, trapframe được gán như thế nào?
+- Allocate
+- Map pagetable
+- Free
+- Note: cần set PTE_U để user có thể truy cập!
+
+Page tables (Speed up system calls)
+
+USYSCALL
+
+gán pid vào chỗ này
+
+Page tables (Print page tables)
+-
+
+Define a function called vmprint(), pagetable_t argument
+Insert if(p->pid==1) vmprint(p->pagetable) in exec.c just before the return
+argc.
+Hint: The function `freewalk` may be inspirational.
+
+Page tables (Detect which pages have been accessed)
+-
+
+Đọc hiểu `pgaccess_test` trong `user/pgbtltest.c`
+Bắt đầu implement `sys_pgaccess()` trong `kernel/sysproc.c`.
+walk() trong kernel/vm.c giúp tìm PTEs.
+Định nghĩa PTE_A, access bit, trong kernel/riscv.h
+- Câu hỏi: Khi mình access (buf[PGSIZE * 1] += 1) trong
+`pgaccess_test`, cái gì set PTE_A vào PTE?
+
+Traps
+-
+
+System call
+Interrupt
+Exception
+
+Chuyển từ user space sang kernel space.
+- Trước khi chuyển sang kernel space thì phải lưu lại states của process
+hiện tại (register, ...)
+
+Traps (Backtrace)
+
+Traps (Backtrace)
+
+

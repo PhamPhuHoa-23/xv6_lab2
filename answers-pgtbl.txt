@@ -1,0 +1,2 @@
+Câu trả lời: Hardware - Là bộ quản lý bộ nhớ của RISC-V sẽ tự động set bit PTE_A (Access bit) khi trang bộ nhớ đó được truy cập.
+
