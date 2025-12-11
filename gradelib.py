@@ -7,7 +7,7 @@ from optparse import OptionParser
 __all__ = []
 
 ##################################################################
-# Test structure
+# Test structure 
 #
 
 __all__ += ["test", "end_part", "run_tests", "get_current_test"]
